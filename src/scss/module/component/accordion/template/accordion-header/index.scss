@@ -1,0 +1,21 @@
+@use "sass:color";
+
+@use "sass:map";
+
+@use "../../definition" as *;
+
+$me: #{$class}__header;
+
+#{$me} {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  cursor: pointer;
+
+  gap: map.get($configuration, "spacing", "md");
+
+  padding-top: map.get($configuration, "spacing", "3xl");
+
+}

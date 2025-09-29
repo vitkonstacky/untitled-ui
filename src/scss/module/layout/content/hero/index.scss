@@ -1,0 +1,221 @@
+@use "sass:map";
+
+@use "../../../../generic/configuration" as *;
+
+.hero {
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding-top: map.get($configuration, "spacing", "7xl");
+
+  padding-bottom: map.get($configuration, "spacing", "7xl");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .hero {
+
+    flex-direction: row;
+
+    min-height: 720px;
+
+    padding-top: 0;
+
+    padding-bottom: 0;
+
+  }
+
+}
+
+.hero__header {
+
+  width: 100%;
+
+  margin-bottom: map.get($configuration, "spacing", "4xl");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .hero__header {
+
+    position: relative;
+
+    overflow: hidden;
+
+    width: 50%;
+
+    margin-bottom: 0;
+
+    @at-root .hero:nth-child(odd) {
+
+      .hero__header {
+
+        order: 2;
+
+      }
+
+    }
+
+  }
+
+}
+
+.hero__image {
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .hero__image {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    left: 0;
+
+    object-fit: cover;
+
+    margin: auto;
+
+  }
+
+}
+
+.hero__content {
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .hero__content {
+
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-top: map.get($configuration, "spacing", "9xl");
+
+    padding-right: map.get($configuration, "spacing", "9xl");
+
+    padding-bottom: map.get($configuration, "spacing", "9xl");
+
+    padding-left: map.get($configuration, "spacing", "9xl");
+
+    @at-root .hero:nth-child(odd) {
+
+      .hero__content {
+
+        order: 1;
+
+      }
+
+    }
+
+  }
+
+}
+
+.hero__overline {
+
+  font-weight: 400;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0;
+
+  margin-bottom: map.get($configuration, "spacing", "xl");
+
+  color: #404968;
+
+}
+
+.hero__title {
+
+  font-weight: 600;
+
+  font-size: 36px;
+
+  line-height: 44px;
+
+  letter-spacing: -2%;
+
+  color: #111322;
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .hero__title {
+
+    font-size: 60px;
+
+    line-height: 72px;
+
+    letter-spacing: -2%;
+
+  }
+
+}
+
+.hero__subtitle {
+
+  font-weight: 400;
+
+  font-size: 20px;
+
+  line-height: 30px;
+
+  letter-spacing: 0;
+
+  margin-top: map.get($configuration, "spacing", "xl");
+
+  color: #4a5578;
+
+}
+
+.hero__controls {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "lg");
+
+  margin-top: map.get($configuration, "spacing", "4xl");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .hero__controls {
+
+    align-items: flex-start;
+
+  }
+
+}

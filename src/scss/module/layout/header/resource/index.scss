@@ -1,0 +1,85 @@
+@use "sass:map";
+
+@use "../../../../generic/configuration" as *;
+
+.resource {
+
+  display: flex;
+
+  gap: map.get($configuration, "spacing", "xl");
+
+  padding-top: map.get($configuration, "spacing", "lg");
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-bottom: map.get($configuration, "spacing", "lg");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .resource {
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}
+
+.resource__aside {
+
+  flex: 0 0 auto;
+
+}
+
+.resource__symbol {
+
+  width: 48px;
+
+  height: 48px;
+
+}
+
+.resource__content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1 1 auto;
+
+  gap: map.get($configuration, "spacing", "xs");
+
+}
+
+.resource__title {
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 24px;
+
+  letter-spacing: 0;
+
+  color: #111322;
+
+}
+
+.resource__subtitle {
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 20px;
+
+  letter-spacing: 0;
+
+  color: #4a5578;
+
+}

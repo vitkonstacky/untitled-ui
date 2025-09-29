@@ -1,0 +1,35 @@
+@use "sass:color";
+
+@use "sass:map";
+
+@use "../../definition" as *;
+
+$me: #{$class}__content;
+
+#{$me} {
+
+  font-weight: 400;
+
+  font-size: 16px;
+
+  line-height: 24px;
+
+  letter-spacing: 0;
+
+  color: #e9d7fe;
+
+  @at-root #{$class} {
+
+    &:not(#{$class}--open) {
+
+      #{$me} {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+}

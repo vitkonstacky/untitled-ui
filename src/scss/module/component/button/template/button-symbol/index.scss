@@ -1,0 +1,39 @@
+@use "sass:color";
+
+@use "sass:map";
+
+@use "../../definition" as *;
+
+$me: #{$class}__symbol;
+
+#{$me} {
+
+  font-family: "Material Symbols Outlined";
+
+  font-size: 20px;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  user-select: none;
+
+  text-decoration: none;
+
+  text-transform: none;
+
+  &#{$me}--leading {
+
+    margin-right: 6px;
+
+  }
+
+  &#{$me}--trailing {
+
+    margin-left: 6px;
+
+  }
+
+}

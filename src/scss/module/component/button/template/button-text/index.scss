@@ -1,0 +1,31 @@
+@use "sass:color";
+
+@use "sass:map";
+
+@use "../../definition" as *;
+
+$me: #{$class}__text;
+
+#{$me} {
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 24px;
+
+  letter-spacing: 0;
+
+  user-select: none;
+
+  text-decoration: none;
+
+  text-transform: none;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+}

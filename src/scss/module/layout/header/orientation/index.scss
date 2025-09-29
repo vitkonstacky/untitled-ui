@@ -1,0 +1,29 @@
+@use "sass:map";
+
+@use "../../../../generic/configuration" as *;
+
+.orientation {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1 1 auto;
+
+  gap: map.get($configuration, "spacing", "lg");
+
+}
+
+.orientation__anchor {
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 24px;
+
+  letter-spacing: 0;
+
+  color: #404968;
+
+}

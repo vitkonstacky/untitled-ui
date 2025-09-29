@@ -1,0 +1,21 @@
+@use "sass:color";
+
+@use "sass:map";
+
+@use "../../definition" as *;
+
+$me: #{$class}__title;
+
+#{$me} {
+
+  font-weight: 500;
+
+  font-size: 18px;
+
+  line-height: 28px;
+
+  letter-spacing: 0;
+
+  color: #ffffff;
+
+}

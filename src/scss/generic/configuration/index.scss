@@ -1,0 +1,30 @@
+@use "sass:color";
+
+$configuration: (
+  "radius": (
+    "xxs": 0.125rem,
+    "xs": 0.250rem,
+    "sm": 0.375rem,
+    "md": 0.500rem,
+    "lg": 0.625rem,
+    "xl": 0.750rem,
+  ),
+  "spacing": (
+    "mobile": 16px,
+    "desktop": 32px,
+    "xxs": 2px,
+    "xs": 4px,
+    "sm": 6px,
+    "md": 8px,
+    "lg": 12px,
+    "xl": 16px,
+    "2xl": 20px,
+    "3xl": 24px,
+    "4xl": 32px,
+    "5xl": 40px,
+    "6xl": 48px,
+    "7xl": 64px,
+    "8xl": 80px,
+    "9xl": 96px,
+  ),
+);

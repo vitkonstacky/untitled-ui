@@ -1,0 +1,295 @@
+@use "sass:map";
+
+@use "../../../generic/configuration" as *;
+
+.header {
+
+  width: 100%;
+
+  background-color: #ffffff;
+
+  &.header--open {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 24;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: auto;
+
+  }
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .header {
+
+    height: 80px;
+
+  }
+
+}
+
+.header__header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  height: 72px;
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-left: map.get($configuration, "spacing", "lg");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .header__header {
+
+    justify-content: flex-start;
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}
+
+.header__content {
+
+  background-color: #ffffff;
+
+  @at-root .header {
+
+    &:not(.header--open) {
+
+      .header__content {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+}
+
+.header__navigation {
+
+  padding-top: map.get($configuration, "spacing", "3xl");
+
+  padding-bottom: map.get($configuration, "spacing", "3xl");
+
+  @at-root .header__header {
+
+    .header__navigation {
+
+      display: none;
+
+      padding-right: map.get($configuration, "spacing", "5xl");
+
+      padding-left: map.get($configuration, "spacing", "5xl");
+
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .header__header {
+
+    .header__navigation {
+
+      display: flex;
+
+      align-items: center;
+
+      height: 100%;
+
+      padding-top: 0;
+
+      padding-bottom: 0;
+
+      @media screen and (min-width: 920px) {
+
+        .navigation {
+
+          flex-direction: row;
+
+          align-items: center;
+
+          height: 100%;
+
+          .navigation__content {
+
+            position: fixed;
+
+            top: 80px;
+
+            left: 0;
+
+            z-index: 24;
+
+            flex-direction: row;
+
+            width: 100%;
+
+            padding-top: map.get($configuration, "spacing", "4xl");
+
+            padding-bottom: map.get($configuration, "spacing", "4xl");
+
+            background-color: #ffffff;
+
+            border-top: 1px solid rgba(16, 24, 40, 0.06);
+
+            box-shadow: 0 1px 3px 0 rgba(16, 24, 40, 0.06);
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.header__resources {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "xs");
+
+  padding-top: map.get($configuration, "spacing", "md");
+
+  padding-bottom: map.get($configuration, "spacing", "xl");
+
+}
+
+.header__orientation {
+
+  display: flex;
+
+  gap: map.get($configuration, "spacing", "3xl");
+
+  padding-top: map.get($configuration, "spacing", "3xl");
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-bottom: map.get($configuration, "spacing", "3xl");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+  border-top: 1px solid #dcdfea;
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .header__orientation {
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}
+
+.header__authentication {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "lg");
+
+  padding-top: map.get($configuration, "spacing", "3xl");
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-bottom: map.get($configuration, "spacing", "3xl");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+  @at-root .header__header {
+
+    .header__authentication {
+
+      display: none;
+
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .header__header {
+
+    .header__authentication {
+
+      display: flex;
+
+      flex-direction: row-reverse;
+
+      padding: 0;
+
+      margin-left: auto;
+
+      .button {
+
+        height: 44px;
+
+        padding-top: 10px;
+
+        padding-right: map.get($configuration, "spacing", "xl");
+
+        padding-bottom: 10px;
+
+        padding-left: map.get($configuration, "spacing", "xl");
+
+        &.button--secondary {
+
+          border: none;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .header__authentication {
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}

@@ -1,0 +1,17 @@
+@mixin maybe-wrapper($condition, $wrapper) {
+
+  @if ($condition) {
+
+    #{$wrapper} {
+
+      @content;
+
+    }
+
+  } @else {
+
+    @content;
+
+  }
+
+}

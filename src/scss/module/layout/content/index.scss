@@ -1,0 +1,95 @@
+@use "sass:map";
+
+@use "../../../generic/configuration" as *;
+
+.content__faq {
+
+  padding-top: map.get($configuration, "spacing", "7xl");
+
+  padding-bottom: map.get($configuration, "spacing", "7xl");
+
+  background-color: #53389e;
+
+}
+
+.content__team {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "6xl");
+
+  padding-top: map.get($configuration, "spacing", "7xl");
+
+  padding-bottom: map.get($configuration, "spacing", "6xl");
+
+}
+
+.content__members {
+
+  display: grid;
+
+  gap: map.get($configuration, "spacing", "3xl");
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-bottom: map.get($configuration, "spacing", "7xl");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .content__members {
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-rows: 320px 320px 320px;
+
+    grid-template-areas: "a a b" "a a e" "d c e";
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+    .member:nth-child(1) {
+
+      grid-area: a;
+
+    }
+
+    .member:nth-child(2) {
+
+      grid-area: b;
+
+    }
+
+    .member:nth-child(3) {
+
+      grid-area: c;
+
+    }
+
+    .member:nth-child(4) {
+
+      grid-area: d;
+
+    }
+
+    .member:nth-child(5) {
+
+      grid-area: e;
+
+    }
+
+    .member:nth-child(6) {
+
+      display: none;
+
+    }
+
+  }
+
+}

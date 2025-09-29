@@ -1,0 +1,23 @@
+@use "sass:color";
+
+@use "sass:map";
+
+@use "../../definition" as *;
+
+$me: #{$class};
+
+#{$me} {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "md");
+
+  & + & {
+
+    border-top: #b692f6;
+
+  }
+
+}

@@ -1,0 +1,215 @@
+@use "sass:color";
+
+@use "sass:map";
+
+@use "../../definition" as *;
+
+$me: #{$class};
+
+#{$me} {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 0;
+
+  height: 48px;
+
+  padding-top: map.get($configuration, "spacing", "lg");
+
+  padding-right: 18px;
+
+  padding-bottom: map.get($configuration, "spacing", "lg");
+
+  padding-left: 18px;
+
+  border-radius: map.get($configuration, "radius", "md");
+
+  transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+  //
+  // Hierarchy
+  //
+  & {
+
+    //
+    // Primary
+    //
+    &#{$me}--primary {
+
+      //
+      // State
+      //
+      & {
+
+        //
+        // Definition
+        //
+
+        $color: #ffffff;
+
+        $background-color: #7f56d9;
+
+        //
+        // Default
+        //
+        & {
+
+          color: rgba($color, 100%);
+
+          background-color: rgba($background-color, 100%);
+
+        }
+
+        //
+        // Hover
+        //
+        &:hover {
+
+          color: rgba($color, 100%);
+
+          background-color: rgba($background-color, 100% - 8%);
+
+        }
+
+        //
+        // Focus
+        //
+        &:focus-visible {
+
+          color: rgba($color, 100%);
+
+          background-color: rgba($background-color, 100% - 24%);
+
+        }
+
+        //
+        // Active
+        //
+        &:active {
+
+          color: rgba($color, 100%);
+
+          background-color: rgba($background-color, 100% - 32%);
+
+        }
+
+      }
+
+    }
+
+    //
+    // Secondary
+    //
+    &#{$me}--secondary {
+
+      //
+      // State
+      //
+      & {
+
+        //
+        // Definition
+        //
+
+        $color: #404968;
+
+        $background-color: #ffffff;
+
+        $border-color: #b9c0d4;
+
+        //
+        // Default
+        //
+        & {
+
+          color: rgba($color, 100%);
+
+          background-color: rgba($background-color, 100%);
+
+          border: 1px solid rgba($border-color, 100%);
+
+        }
+
+        //
+        // Hover
+        //
+        &:hover {
+
+          color: rgba($color, 100% - 8%);
+
+          background-color: rgba($background-color, 100%);
+
+          border-color: 1px solid rgba($border-color, 100% - 8%);
+
+        }
+
+        //
+        // Focus
+        //
+        &:focus-visible {
+
+          color: rgba($color, 100% - 24%);
+
+          background-color: rgba($background-color, 100%);
+
+          border-color: 1px solid rgba($border-color, 100% - 24%);
+
+        }
+
+        //
+        // Active
+        //
+        &:active {
+
+          color: rgba($color, 100% - 32%);
+
+          background-color: rgba($background-color, 100%);
+
+          border-color: 1px solid rgba($border-color, 100% - 32%);
+
+        }
+
+      }
+
+    }
+
+  }
+
+  //
+  // Inert
+  //
+  &[disabled], &[inert] {
+
+    cursor: default;
+
+    pointer-events: none;
+
+    opacity: 38%;
+
+  }
+
+}
+
+@media screen and (min-width: 920px) {
+
+  #{$me} {
+
+    height: 56px;
+
+    padding-top: map.get($configuration, "spacing", "xl");
+
+    padding-right: 22px;
+
+    padding-bottom: map.get($configuration, "spacing", "xl");
+
+    padding-left: 22px;
+
+  }
+
+}

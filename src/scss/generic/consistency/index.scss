@@ -1,0 +1,85 @@
+*, *::before, *::after {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+html {
+
+  text-size-adjust: none;
+
+}
+
+body {
+
+  font-family: "Inter", serif;
+
+  font-size: 100%;
+
+  line-height: 1;
+
+  position: relative;
+
+  min-height: 100vh;
+
+}
+
+ol, ul {
+
+  list-style: none;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  text-wrap: balance;
+
+  overflow-wrap: break-word;
+
+}
+
+p {
+
+  text-wrap: pretty;
+
+  overflow-wrap: break-word;
+
+}
+
+a {
+
+  text-decoration: none;
+
+  text-decoration-skip-ink: auto;
+
+  color: currentColor;
+
+}
+
+canvas, img, picture, svg, video {
+
+  display: block;
+
+  max-width: 100%;
+
+}
+
+button, input, select, textarea {
+
+  font-family: inherit;
+
+  font-size: inherit;
+
+}
+
+button {
+
+  background: none;
+
+  border: none;
+
+}

@@ -1,0 +1,37 @@
+@use "sass:color";
+
+@use "sass:map";
+
+@use "../../definition" as *;
+
+$me: #{$class}__anchor;
+
+#{$me} {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: map.get($configuration, "spacing", "md");
+
+  padding-top: map.get($configuration, "spacing", "lg");
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-bottom: map.get($configuration, "spacing", "lg");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  #{$me} {
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}

@@ -1,0 +1,141 @@
+@use "sass:map";
+
+@use "../../../../generic/configuration" as *;
+
+.faq {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "6xl");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .faq {
+
+    max-width: 768px;
+
+    margin-right: auto;
+
+    margin-left: auto;
+
+  }
+
+}
+
+.faq__header {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "xl");
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .faq__header {
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}
+
+.faq__title {
+
+  font-weight: 600;
+
+  font-size: 30px;
+
+  line-height: 38px;
+
+  letter-spacing: 0;
+
+  text-align: center;
+
+  color: #ffffff;
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .faq__title {
+
+    font-weight: 600;
+
+    font-size: 36px;
+
+    line-height: 44px;
+
+    letter-spacing: -2%;
+
+  }
+
+}
+
+.faq__subtitle {
+
+  font-weight: 400;
+
+  font-size: 18px;
+
+  line-height: 28px;
+
+  letter-spacing: 0;
+
+  text-align: center;
+
+  color: #e9d7fe;
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .faq__subtitle {
+
+    font-weight: 400;
+
+    font-size: 20px;
+
+    line-height: 30px;
+
+  }
+
+}
+
+.faq__content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "4xl");
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .faq__subtitle {
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}

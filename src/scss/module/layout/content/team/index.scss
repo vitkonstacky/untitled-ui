@@ -1,0 +1,149 @@
+@use "sass:map";
+
+@use "../../../../generic/configuration" as *;
+
+.team {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "4xl");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .team {
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+  }
+
+}
+
+.team__content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .team__content {
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}
+
+.team__overline {
+
+  font-weight: 600;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  letter-spacing: 0;
+
+  margin-bottom: map.get($configuration, "spacing", "lg");
+
+  color: #6941c6;
+
+}
+
+.team__title {
+
+  font-weight: 600;
+
+  font-size: 30px;
+
+  line-height: 38px;
+
+  letter-spacing: 0;
+
+  color: #111322;
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .team__title {
+
+    font-size: 36px;
+
+    line-height: 44px;
+
+    letter-spacing: -2%;
+
+  }
+
+}
+
+.team__subtitle {
+
+  font-weight: 400;
+
+  font-size: 18px;
+
+  line-height: 28px;
+
+  letter-spacing: 0;
+
+  margin-top: map.get($configuration, "spacing", "xl");
+
+  color: #4a5578;
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .team__subtitle {
+
+    font-size: 20px;
+
+    line-height: 30px;
+
+  }
+
+}
+
+.team__footer {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: map.get($configuration, "spacing", "lg");
+
+  padding-right: map.get($configuration, "spacing", "mobile");
+
+  padding-left: map.get($configuration, "spacing", "mobile");
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .team__footer {
+
+    flex-direction: row-reverse;
+
+    padding-right: map.get($configuration, "spacing", "desktop");
+
+    padding-left: map.get($configuration, "spacing", "desktop");
+
+  }
+
+}

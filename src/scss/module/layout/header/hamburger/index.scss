@@ -1,0 +1,77 @@
+@use "sass:map";
+
+@use "../../../../generic/configuration" as *;
+
+.hamburger {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  width: 24px;
+
+  height: 24px;
+
+}
+
+@media screen and (min-width: 920px) {
+
+  .hamburger {
+
+    display: none;
+
+  }
+
+}
+
+.hamburger__symbol {
+
+  font-family: "Material Symbols Outlined";
+
+  font-size: 24px;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  user-select: none;
+
+  text-decoration: none;
+
+  text-transform: none;
+
+  color: #404968;
+
+  @at-root .header {
+
+    &:not(.header--open) {
+
+      .hamburger__symbol--on {
+
+        display: none;
+
+      }
+
+    }
+
+    &.header--open {
+
+      .hamburger__symbol--off {
+
+        display: none;
+
+      }
+
+    }
+
+  }
+
+}
