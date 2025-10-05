@@ -30,7 +30,7 @@
 
   <body>
 
-    <header class="header" x-data="hamburger" :class="open && 'header--open'">
+    <header class="header" x-data="hamburger" :class="open && 'header--open'" @resize.window="resize()">
 
       <div class="header__header">
 

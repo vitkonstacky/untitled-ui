@@ -3,6 +3,31 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /**
+   * Header reset
+   */
+  let lastWidth = window.innerWidth;
+
+  window.addEventListener("resize", () => {
+
+    if (lastWidth < 920 && window.innerWidth >= 920) {
+
+      const togglable = document.querySelector(".header--open");
+
+      if (togglable !== null) {
+
+        document.body.removeAttribute("style");
+
+        togglable.classList.remove("header--open");
+
+      }
+
+    }
+
+    lastWidth = window.innerWidth;
+
+  });
+
+  /**
    * Hamburger
    */
   (function () {
@@ -21,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (open) {
 
-            document.body.style.overflow = "";
+            document.body.removeAttribute("style");
 
             togglable.classList.remove("header--open");
 

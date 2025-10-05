@@ -100,6 +100,12 @@
 
 .header__navigation {
 
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  flex: 1 1 auto;
+
   padding-top: map.get($configuration, "spacing", "3xl");
 
   padding-bottom: map.get($configuration, "spacing", "3xl");
@@ -263,6 +269,8 @@
       display: flex;
 
       flex-direction: row-reverse;
+
+      flex: 0 0 auto;
 
       padding: 0;
 

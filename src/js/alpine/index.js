@@ -9,13 +9,29 @@ document.addEventListener("alpine:init", () => {
 
     return {
 
+      lastWidth: window.innerWidth,
+
       open: false,
 
       toggle() {
 
         this.open = this.open === false;
 
-        this.open === true ? document.body.style.overflow = "hidden" : document.body.style.overflow = "";
+        this.open === true ? document.body.style.overflow = "hidden" : document.body.removeAttribute("style");
+
+      },
+
+      resize() {
+
+        if (this.lastWidth < 920 && window.innerWidth >= 920) {
+
+          document.body.removeAttribute("style")
+
+          this.open = false;
+
+        }
+
+        this.lastWidth = window.innerWidth;
 
       },
 
