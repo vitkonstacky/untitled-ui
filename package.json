@@ -8,6 +8,10 @@
 
   "scripts": {
 
+    "build:alpine": "gulp build --alpine",
+
+    "build:pure": "gulp build --pure",
+
     "serve:alpine": "gulp serve --alpine",
 
     "serve:pure": "gulp serve --pure"
